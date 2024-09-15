@@ -5,26 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom</title>
 
-    <style>
-      .box-wrap {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-      .box-style {
-        padding: 13px;
-        padding: 25px;
-        border-radius: 10px;
-        background: #bbfce7;
-        text-align: center;
-        flex:1 1 300px;
-        border:2px solid #fce6e6
-      }
-    </style>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
+    <!-- event lister part  -->
+
+    <div id="input-wrap">
+      <h5 id="text">Chenge Text</h5>
+      <input type="text">
+      <button>Update</button>
+    </div>
+
+    <p>Click Button:</p>
+
+      <div id="btn-wrap" class="button-wrap">
+        <button id="red" onclick="document.getElementById('btn-wrap').style.background = 'red' ">Red</button>
+        <button onclick="makeGreen()" id="green">Green</button>
+        <button id="pink">Pink</button>
+        <button id="yellow">Yellow</button>
+        <button id="parpel">Gray</button>
+        <button id="blue">Blue</button>
+      </div>
+
+
+
     <h2 id="heading">This is dom Heading</h2>
     <p class="sub-heading">Sub heading</p>
     <div class="section"></div>
@@ -65,61 +70,7 @@
         </p>
       </div>
     </div>
-    <script src="script.js"></script>
-    <script>
-      const heading = document.getElementById("heading");
-      heading.style.backgroundColor = "#0645";
-      heading.style.padding = "20px";
-      heading.style.textAlign = "center";
-      heading.style.borderRadius = "10px";
-      heading.style.marginBottom = "20px";
-
-      const subHeading = document.getElementsByClassName("sub-heading")[0];
-      subHeading.style.textAlign = "center";
-      subHeading.style.color = "#12dd";
-
-      const boxWrap = document.querySelector(".wrap");
-      boxWrap.classList.add("box-wrap");
-
-      const boxs = document.querySelectorAll(".box");
-      for(box of boxs){
-        box.classList.add("box-style");
-        box.style.widht = "100%"
-      }
-      const imgs = document.querySelectorAll(".img");
-
-      for(img of imgs){
-        img.borderRadius = "10px"
-        img.style.height = "150px";
-        img.style.widht = "100%";
-        img.style.backgroundColor = "#4343"
-      }
-
-      const item = document.querySelector(".item");
-      const ul = document.createElement("ul");
-      item.appendChild(ul)
-
-      const li =document.createElement('li');
-      li.innerText = "Text One"
-      ul.appendChild(li)
-
-      const li2 = document.createElement("li");
-      li2.innerText = "Text Two"
-      ul.appendChild(li2);
-
-      const li3 = document.createElement("li");
-      li3.innerText = "Text Three";
-      ul.appendChild(li3);
-
-      const li4 = document.createElement("li");
-      li4.innerText = "Text Four";
-      ul.appendChild(li4);
-
-      item.style.backgroundColor = "#1bbb";
-      item.style.padding = "20px"
-      item.style.borderRadius = "12px";
-      item.style.marginBottom = "20px"
-
-    </script>
+    <script src="js/script.js"></script>
+    <script src="js/event-listener.js"></script>
   </body>
 </html>
