@@ -41,3 +41,18 @@ document.getElementById("blue").addEventListener("click", function () {
 
 
 // text Change 
+
+const changeText = document.getElementById("text");
+const textInput = document.getElementById("inputChenge");
+const textUpdateBtn = document.getElementById("textUpdate");
+textUpdateBtn.addEventListener("click",function () {
+  if (textInput.value.trim() === "") {
+    alert("Please input a value");
+  }else{
+    changeText.innerText = textInput.value
+    textInput.value = "";
+  }
+})
+
+
+
