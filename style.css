@@ -1,0 +1,9 @@
+.section-style {
+  background:tomato;
+  color:#fff;
+  font-size: 18px;
+  text-align: center;
+  padding:20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
